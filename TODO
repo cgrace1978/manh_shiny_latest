@@ -1,0 +1,8 @@
+## TODO
+
+# Variant data missing when click on cell - in the annotmelt file - need to specify snp field in the input data
+# Prox Gene data missing also - need to specify genes field in the input file.
+# How to provide access to LZ data for third parties?
+# Images on the help tab?
+# check chr-st-en functionality.
+# Circle functionality?
