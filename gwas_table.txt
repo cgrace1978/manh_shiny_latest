@@ -1,2 +1,2 @@
 name	prefix	url	PPA
-test	cad	https://www.chg.ox.ac.uk/	0
+test	cad	https://www.chg.ox.ac.uk/	1
