@@ -1,4 +1,4 @@
-matrix.list<-generateMatrix(gwasFile = "genfiles\\cad.add.160614_manhformat.txt.gz", 
+matrix.list<-generateMatrix(gwasFile = "genfiles\\cad.add.160614_manhformat_rsid_geneinfo_pvalmatch.txt.gz", 
                             configFile = "cad.config.txt", 
                             pos.split = 3E6)
 
@@ -14,7 +14,7 @@ write.table(matrix.list$pos.df, "3mbp.cad.positions.txt",
             col.names = T, row.names = F, sep = "\t", quote = FALSE)
 
 for(i in 1:22){
-  in.df<-read.table(file = "genfiles\\cad.add.160614_manhformat.txt.gz", sep="\t", header = T)
+  in.df<-read.table(file = "genfiles\\cad.add.160614_manhformat_rsid_geneinfo_pvalmatch.txt.gz", sep="\t", header = T)
   in.df<-in.df[in.df$chr==i,]
   write.table(x = in.df, file = "gwas.tmp", append = F, quote = F, sep = "\t", row.names = F)
   
