@@ -112,7 +112,7 @@ ui <- fluidPage(theme="manhplot.css", title = "Interactive Manhattan++", useShin
       h2("Interactive Manhattan++"),selectInput("study", "Study:", gwas.list),
       uiOutput("title_info"),
       uiOutput("hover_info"), ## handles hover over heatmap functionality
-      textInput("position", "Zoom to gene, SNP or position \n(eg. BAG3, rs72840788, chr10:121415685, chr10:121165685-121665685)"),
+      textInput("position", "Zoom to gene, SNP or position"), #\n(eg. BAG3, rs72840788, chr10:121415685, chr10:121165685-121665685)"),
       actionButton("do", "Zoom"), ## search button
       ##verbatimTextOutput("searchval"), ## text shows the results of the search
       tags$br(),HTML("<b>Association plot Link:</b>"),
@@ -886,7 +886,7 @@ server <- function(input, output, session) {
               panelText<-paste0("<b>#Variants:</b> ",nvar,"</br>",
                                 "<b>Best Variant:</b> ",snp,"</br>",
                                 "<b>Best p-value: </b>",pval,"</br>",
-                                "<b>chr:start-end:</b> ",chrbp, "</br>",
+                                "<b>chr:start-end:</b> ",paste0("chr",chr,":",(bp - 1E5),"-",(bp + 1E5)), "</br>",
                                 "<b>Prox. gene(s):</b> ",gene,
                                 "</br>",mafconseqstr)
             }
