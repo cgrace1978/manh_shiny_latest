@@ -95,7 +95,7 @@ createChrList<-function(chr, bins = "500kbp", dataset="cad"){
 }
 
 ## url to the locuszoom.js cgi script
-weburl<-"https://euclid.well.ox.ac.uk/cgi-bin/manh/dyn.LZ.cgi"
+weburl<-"https://www.chg.ox.ac.uk/"
 
 ## instructions when cell information pane is not frozen
 instructions<-"<b>Click on a cell to freeze</b></br>"
